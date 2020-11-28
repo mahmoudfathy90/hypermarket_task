@@ -12,7 +12,7 @@
     <fragment
         android:id="@+id/listScreen"
         android:name="com.example.roubstatask.productList.presentation.screens.ProductListFragment"
-        android:label="ProductList">
+        android:label="@string/product_list">
 
     </fragment>
 

@@ -1,4 +1,4 @@
-package com.example.roubstatask.productList
+package com.example.roubstatask.productList.presentation.util
 
 class Constants {
 

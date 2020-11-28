@@ -8,5 +8,6 @@
 
     <string name="error"> An Error Happened  </string>
     <string name="empty">No Product Found</string>
+    <string name="product_list">Products List</string>
 
 </resources>

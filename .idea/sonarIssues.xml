@@ -8,6 +8,16 @@
             <set />
           </value>
         </entry>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/fragment.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/build.gradle">
           <value>
             <set />
@@ -84,6 +94,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/example/roubstatask/productList/domain/ProductListResult.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/roubstatask/productList/presentation/BaseActivityWithInjector.kt">
           <value>
             <set />
           </value>
@@ -188,6 +203,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/roubstatask/productList/presentation/util/Constants.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/example/roubstatask/productList/presentation/util/viewUtils.kt">
           <value>
             <set />
@@ -238,12 +258,57 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../TruDocTask/app/src/main/java/com/example/trudoctask/BaseFragmentWithInjector.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../TruDocTask/app/src/main/java/com/example/trudoctask/MainActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../TruDocTask/app/src/main/java/com/example/trudoctask/businessDetails/presentation/di/component/ApplicationComponent.kt">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../TruDocTask/app/src/main/java/com/example/trudoctask/businessDetails/presentation/di/module/ListModule.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../TruDocTask/app/src/main/java/com/example/trudoctask/bussinessList/presentation/BusinessListViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../TruDocTask/app/src/main/java/com/example/trudoctask/bussinessList/presentation/ItemDataSourceFactory.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../TruDocTask/app/src/main/java/com/example/trudoctask/productList/presentation/BusinessListViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../TruDocTask/app/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../TruDocTask/app/src/main/res/layout/error_layout.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../TruDocTask/app/src/main/res/layout/fragment_business_list.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../TruDocTask/app/src/main/res/layout/recycler_view_business_item.xml">
           <value>
             <set />
           </value>

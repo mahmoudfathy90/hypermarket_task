@@ -59,8 +59,6 @@
                 android:id="@+id/priceRange"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-                android:letterSpacing=".3"
                 android:text="@{model.productPrice}"
                 android:textColor="@android:color/holo_red_dark"
                 android:textSize="@dimen/font_standard"

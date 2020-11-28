@@ -1,5 +1,7 @@
 package com.example.roubstatask.productList.presentation.screens
 
+import android.util.Log
+import androidx.compose.runtime.invalidate
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.DataSource
 import androidx.paging.PageKeyedDataSource
@@ -12,22 +14,31 @@ import javax.inject.Provider
 
 class ItemDataSourceFactory @Inject constructor(private var item: ItemDataSource) :
     DataSource.Factory<Int, ProductListModel.ProductModel>() {
+
     @Inject lateinit var itemDataSourceProvider : Provider<ItemDataSource>
-    private val itemLiveDataSource: MutableLiveData<PageKeyedDataSource<Int, ProductListModel.ProductModel>> =
-        MutableLiveData()
+
+    private val itemLiveDataSource: MutableLiveData<PageKeyedDataSource<Int, ProductListModel.ProductModel>>
+            = MutableLiveData()
+
 
 
     override fun create(): DataSource<Int, ProductListModel.ProductModel> {
+        item=itemDataSourceProvider.get()
         itemLiveDataSource.postValue(item)
         return item
     }
 
+
     fun stateEvent() = item.stateEvent
     fun getDataSource() = item
+
+
     fun search(term: String?) {
         item = itemDataSourceProvider.get()
+        Log.e("hashcode",item.toString())
         item.search(term)
         itemLiveDataSource.value?.invalidate()
+
     }
 
 }

@@ -4,33 +4,35 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
-import com.example.roubstatask.productList.Constants.Companion.PAGE_SIZE
+import com.example.roubstatask.productList.presentation.util.Constants.Companion.PAGE_SIZE
 import com.example.roubstatask.productList.data.service.response.ProductListModel
+import com.example.roubstatask.productList.presentation.util.EnhancedLiveEvent
+import kotlinx.coroutines.*
 import javax.inject.Inject
 
-class ProductListViewModel @Inject constructor(private val item: ItemDataSourceFactory) :
+class ProductListViewModel @Inject constructor(private val factory: ItemDataSourceFactory) :
     ViewModel() {
     var itemPagedList: LiveData<PagedList<ProductListModel.ProductModel>>
-   //    val searchText = MutableLiveData<String>()
-   //    val isSearching = MutableLiveData<Boolean>(false)
-   // val hideSoftKeyboard = EnhancedLiveEvent<Unit>()
+        val hideSoftKeyboard = EnhancedLiveEvent<Unit>()
+    private lateinit var job: Job
 
 
     init {
         val config = PagedList.Config.Builder().setPageSize(PAGE_SIZE)
             .setEnablePlaceholders(false)
             .build()
-        itemPagedList = LivePagedListBuilder(item, config)
+        itemPagedList = LivePagedListBuilder(factory, config)
             .build()
     }
 
-    fun stateEvent() = item.stateEvent()
+    fun stateEvent() = factory.stateEvent()
 
-    fun search() {
-//        hideSoftKeyboard.call()
-//        val term = searchText.value
-//        item.search(term)
-//        isSearching.postValue(true)
+    fun search(name:String) {
+        factory.search(name)
+//      job=GlobalScope.launch(){
+//           delay(2000)
+//
+//        }
     }
 
 
@@ -42,11 +44,12 @@ class ProductListViewModel @Inject constructor(private val item: ItemDataSourceF
     }
 
     override fun onCleared() {
-        item.getDataSource().cancelJob()
+        factory.getDataSource().cancelJob()
+        job.cancel()
         super.onCleared()
     }
 
     fun retry() {
-        item.getDataSource().retry?.let { it() }
+        factory.getDataSource().retry?.let { it() }
     }
 }
