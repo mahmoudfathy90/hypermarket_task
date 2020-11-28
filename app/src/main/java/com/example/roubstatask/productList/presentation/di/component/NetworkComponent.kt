@@ -2,6 +2,8 @@ package com.example.roubstatask.productList.presentation.di.component
 
 
 
+import androidx.fragment.app.Fragment
+import com.example.roubstatask.BaseFragmentWithInjector
 import com.example.roubstatask.productList.presentation.di.module.ApplicationModule
 import com.example.roubstatask.productList.presentation.di.module.ListModule
 import com.example.roubstatask.productList.presentation.di.module.NetworkModule
@@ -19,7 +21,7 @@ import javax.inject.Singleton
 interface NetworkComponent {
 
 
-
+  fun inject(fragment: BaseFragmentWithInjector)
 
     @Component.Builder
     interface NetworkBuilder {

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/listScreen"
+    android:id="@+id/nav_graph">
+<!--    app:startDestination="@id/listScreen"-->
+
+
+
+    <fragment
+        android:id="@+id/listScreen"
+        android:name="com.example.roubstatask.productList.presentation.screens.ProductListFragment"
+        android:label="ProductList">
+
+    </fragment>
+
+
+
+</navigation>

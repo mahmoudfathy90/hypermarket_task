@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">RoubstaTask</string>
+    <string name="app_name">Roubsta Task</string>
+    <string name="search">Search For Product</string>
+
+    <string name="server_error">Server error happen please try again </string>
+    <string name="bad_request">"Bad request "</string>
+    <string name="no_network_connection">No network connection</string>
+
+    <string name="error"> An Error Happened  </string>
+    <string name="empty">No Product Found</string>
+
 </resources>
