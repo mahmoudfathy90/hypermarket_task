@@ -34,14 +34,10 @@ class MainActivity : BaseActivityWithInjector() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         setSupportActionBar(toolBar)
-        binding.apply {
-            viewModel = productListViewModel
-            lifecycleOwner = this@MainActivity
-        }
-
-        productListViewModel.hideSoftKeyboard.observe(this, Observer {
-            searchView.hideKeyboard()
-        })
+//        binding.apply {
+//            viewModel = productListViewModel
+//            lifecycleOwner = this@MainActivity
+//        }
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {

@@ -66,6 +66,20 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_standard"
+            android:contentDescription="@string/scroll_to_top"
+            android:onClick="@{() -> list.smoothScrollToPosition(0)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="@{viewModel.stateEvent().empty || viewModel.stateEvent().error!=null? View.GONE:View.VISIBLE}"
+
+            app:srcCompat="@drawable/ic_add" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

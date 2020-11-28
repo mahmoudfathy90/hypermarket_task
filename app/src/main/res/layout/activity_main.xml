@@ -3,9 +3,6 @@
 <layout>
     <data class="MainBinding">
         <import type="android.view.View" />
-        <variable
-            name="viewModel"
-            type="com.example.roubstatask.productList.presentation.screens.ProductListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

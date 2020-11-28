@@ -9,5 +9,6 @@
     <string name="error"> An Error Happened  </string>
     <string name="empty">No Product Found</string>
     <string name="product_list">Products List</string>
+    <string name="scroll_to_top">Scroll to top of list</string>
 
 </resources>

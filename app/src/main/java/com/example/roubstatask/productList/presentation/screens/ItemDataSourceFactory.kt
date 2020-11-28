@@ -23,7 +23,6 @@ class ItemDataSourceFactory @Inject constructor(private var item: ItemDataSource
 
 
     override fun create(): DataSource<Int, ProductListModel.ProductModel> {
-        item=itemDataSourceProvider.get()
         itemLiveDataSource.postValue(item)
         return item
     }
@@ -35,7 +34,6 @@ class ItemDataSourceFactory @Inject constructor(private var item: ItemDataSource
 
     fun search(term: String?) {
         item = itemDataSourceProvider.get()
-        Log.e("hashcode",item.toString())
         item.search(term)
         itemLiveDataSource.value?.invalidate()
 

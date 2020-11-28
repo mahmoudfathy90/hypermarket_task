@@ -1,6 +1,7 @@
 package com.example.roubstatask.productList.presentation.screens
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
@@ -13,8 +14,9 @@ import javax.inject.Inject
 class ProductListViewModel @Inject constructor(private val factory: ItemDataSourceFactory) :
     ViewModel() {
     var itemPagedList: LiveData<PagedList<ProductListModel.ProductModel>>
-        val hideSoftKeyboard = EnhancedLiveEvent<Unit>()
     private lateinit var job: Job
+
+
 
 
     init {
@@ -27,14 +29,13 @@ class ProductListViewModel @Inject constructor(private val factory: ItemDataSour
 
     fun stateEvent() = factory.stateEvent()
 
-    fun search(name:String) {
+    fun search(name: String) {
         factory.search(name)
 //      job=GlobalScope.launch(){
 //           delay(2000)
 //
 //        }
     }
-
 
 
     fun clearSearch() {
