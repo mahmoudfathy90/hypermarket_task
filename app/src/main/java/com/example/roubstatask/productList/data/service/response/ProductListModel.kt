@@ -5,9 +5,9 @@ import com.google.gson.annotations.SerializedName
 
 data class ProductListModel(
     @SerializedName("page")
-    var page: List<Page?>?
+    var productModel: List<ProductModel?>?
 ) {
-    data class Page(
+    data class ProductModel(
         @SerializedName("id")
         var id: String?,
         @SerializedName("image")

@@ -13,8 +13,8 @@ interface ListApiService {
      * @param limit [Int]  number of items for list to use by paging
      * @param page [Int]  number of page for  list of returned products results .
      */
-    @GET("businesses/search")
-    suspend fun getAllBusinesses(
+    @GET("robustatask/getProducts")
+    suspend fun getAllProducts(
         @Query("limit") limit: Int?,
         @Query("page") page: Int?,
         @Query("productName") productName: String?
