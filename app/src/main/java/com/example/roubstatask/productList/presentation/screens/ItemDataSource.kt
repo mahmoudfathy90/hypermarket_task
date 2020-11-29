@@ -22,7 +22,7 @@ class ItemDataSource @Inject constructor() :
     val stateEvent = MutableLiveData<ProductListState>()
     private var modelRequest = ListRequestModel(name = "", limit = PAGE_SIZE, page = FIRSTPAGE)
     var retry: (() -> Unit)? = null
-    private lateinit var job: Job
+     lateinit var job: Job
     override fun loadInitial(
         params: LoadInitialParams<Int>,
         callback: LoadInitialCallback<Int, ProductListModel.ProductModel>
@@ -51,6 +51,7 @@ class ItemDataSource @Inject constructor() :
         onEmpty: () -> Unit,
         onResult: (ProductListResult.Success) -> Unit
     ) {
+        if (modelRequest.page==0) return
         val currentPage = param?.key ?: FIRSTPAGE
         Log.e("currentPAge ", " : $currentPage")
         job = GlobalScope.launch(Dispatchers.IO) {

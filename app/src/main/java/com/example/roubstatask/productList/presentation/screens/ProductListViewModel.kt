@@ -30,6 +30,7 @@ class ProductListViewModel @Inject constructor(private val factory: ItemDataSour
     fun stateEvent() = factory.stateEvent()
 
     fun search(name: String) {
+
         factory.search(name)
 //      job=GlobalScope.launch(){
 //           delay(2000)

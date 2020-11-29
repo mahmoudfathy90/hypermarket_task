@@ -3,7 +3,6 @@ package com.example.roubstatask
 import android.os.Bundle
 import android.widget.SearchView
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.NavController
@@ -12,7 +11,6 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.roubstatask.databinding.MainBinding
 import com.example.roubstatask.productList.presentation.BaseActivityWithInjector
 import com.example.roubstatask.productList.presentation.screens.ProductListViewModel
-import com.example.roubstatask.productList.presentation.util.hideKeyboard
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -46,7 +44,7 @@ class MainActivity : BaseActivityWithInjector() {
             }
 
             override fun onQueryTextChange(query: String): Boolean {
-           productListViewModel.search(query)
+              productListViewModel.search(query)
                 return false
             }
         })
