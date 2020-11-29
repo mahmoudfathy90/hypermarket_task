@@ -39,15 +39,8 @@ class ProductListViewModel @Inject constructor(private val factory: ItemDataSour
     }
 
 
-    fun clearSearch() {
-//        isSearching.postValue(false)
-//        searchText.postValue(null)
-//        item.search(null)
-    }
 
     override fun onCleared() {
-        factory.getDataSource().cancelJob()
-        job.cancel()
         super.onCleared()
     }
 
