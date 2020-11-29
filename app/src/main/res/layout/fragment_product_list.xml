@@ -55,16 +55,17 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/empty"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/empty"
-            android:visibility="@{viewModel.stateEvent().empty? View.VISIBLE:View.GONE}"
+        <!--        <androidx.appcompat.widget.AppCompatTextView-->
+        <!--            android:id="@+id/empty"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:gravity="center"-->
+        <!--            -->
+        <!--            android:text="@string/empty"-->
+        <!--            android:visibility="@{viewModel.stateEvent().empty? View.VISIBLE:View.GONE}"-->
 
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floating_action_button"
@@ -73,10 +74,9 @@
             android:layout_margin="@dimen/margin_standard"
             android:contentDescription="@string/scroll_to_top"
             android:onClick="@{() -> list.smoothScrollToPosition(0)}"
+            android:visibility="@{viewModel.stateEvent().error!=null? View.GONE:View.VISIBLE}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:visibility="@{viewModel.stateEvent().empty || viewModel.stateEvent().error!=null? View.GONE:View.VISIBLE}"
-
             app:srcCompat="@drawable/ic_add" />
 
 
